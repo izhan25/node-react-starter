@@ -1,0 +1,32 @@
+{
+  "name": "file-mamager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon server/index.ts",
+    "tsc": "tsc",
+    "client-start": "cd client && npm start",
+    "client-build": "cd client && npm run build",
+    "clean": "rm -rf ./dist && rm -rf ./client/build",
+    "build": "npm run clean && tsc && npm run client-build && cp -rf ./client/build ./dist/public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.9",
+    "@types/express": "^4.17.9",
+    "@types/morgan": "^1.9.2",
+    "nodemon": "^2.0.6",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
